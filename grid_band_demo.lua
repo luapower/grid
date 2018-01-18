@@ -90,13 +90,13 @@ function player:on_render()
 
 		if hit then
 			if bottom then
-				self.cursor = 'resize_vertical'
+				self.cursor = 'size_v'
 				if not self.active and self.lbutton then
 					self.active = band
 					self.ui.action = 'resize_vert'
 				end
 			elseif right then
-				self.cursor = 'resize_horizontal'
+				self.cursor = 'size_h'
 				if not self.active and self.lbutton then
 					self.active = band
 					self.ui.action = 'resize_horiz'
