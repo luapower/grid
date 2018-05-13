@@ -1,3 +1,4 @@
+
 local set_layout = require'grid_band_layout'
 
 --set hierarchy info
@@ -171,8 +172,6 @@ local function hit_test_margins(band, x0, y0, d) --true, top, left, bottom, righ
 end
 
 --class
-
-local glue = require'glue'
 
 local band = {
 	--layout computation

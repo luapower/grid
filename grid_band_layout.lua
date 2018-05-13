@@ -1,4 +1,7 @@
---autolayout algorithm for hierarchies of horizontal bands by Cosmin Apreutesei.
+
+--autolayout algorithm for hierarchies of horizontal bands.
+--Written by Cosmin Apreutesei. Public Domain.
+
 --does not support supplying a maximum width, that would probably require the simplex algorithm.
 --input:  band table with fields w, pw, min_w and and a list of child bands in the array part of the table.
 --output: computed fields _w, _pw, _min_w, _max_w for each band.
@@ -11,7 +14,7 @@
 -- for bands without pw, the default pw = (1 - total pw) / (number of bands without pw) is assigned.
 -- if all band's children are fixed width, the band has fixed width = sum(widths of children).
 -- the band's min. width is constrained by the children's min. width.
--- in case pw cannot be acheived because of w or min_w, the band becomes "rigid". all other "non-rigid" bands
+-- in case pw cannot be achieved because of w or min_w, the band becomes "rigid". all other "non-rigid" bands
 -- are stretched proportionally up (or down) to parent's width.
 
 local function band_min_w(band) --min. width of a band
